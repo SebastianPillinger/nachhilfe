@@ -180,10 +180,13 @@
   <!-- Integriertes E-Mail Formular -->
   <div id="kontaktformular" class="wrap narrow form-container">
     <h3>Direkt eine Nachricht senden</h3>
-    <form action="kontakt.php" method="post" class="contact-form">
+    <form id="contact-form" action="https://formsubmit.co/nachhilfe@sebastian-pillinger.at" method="POST" class="contact-form">
       <p id="form-status" class="form-status" role="status" aria-live="polite" hidden></p>
       <!-- Spam-Falle: für Menschen unsichtbar -->
-      <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+      <div class="hp" aria-hidden="true"><label>Nicht ausfüllen <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+      <input type="hidden" name="_subject" value="Neue Nachhilfe-Anfrage über die Website">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
       <div class="form-group">
         <label for="name">Dein Name / Name des Schülers:</label>
         <input type="text" id="name" name="name" required placeholder="z. B. Max Mustermann">
@@ -204,10 +207,7 @@
         <textarea id="message" name="nachricht" rows="4" required placeholder="Worum geht es oder wann hättest du Zeit für die Probeeinheit?"></textarea>
       </div>
 
-      <label class="form-check">
-        <input type="checkbox" name="datenschutz" required>
-        <span>Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage verwendet werden.</span>
-      </label>
+      <p class="form-note">Deine Angaben verwende ich nur, um deine Anfrage zu beantworten. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
 
       <button type="submit" class="btn btn-full">E-Mail absenden</button>
     </form>
@@ -268,20 +268,50 @@
   });
 })();
 
-// Kontaktformular: Rückmeldung nach dem Absenden
+// Kontaktformular: Versand über FormSubmit ohne Seitenwechsel
 (function () {
+  var form = document.getElementById('contact-form');
   var status = document.getElementById('form-status');
-  if (!status) return;
-  var params = new URLSearchParams(location.search);
-  if (params.has('gesendet')) {
-    status.textContent = 'Danke! Deine Nachricht ist angekommen, ich melde mich so schnell wie möglich.';
-    status.className = 'form-status ok';
-    status.hidden = false;
-  } else if (params.has('fehler')) {
-    status.textContent = 'Das hat leider nicht geklappt. Bitte prüfe deine Angaben oder schreib mir per WhatsApp.';
-    status.className = 'form-status err';
+  if (!form || !window.fetch) return; // ohne JavaScript: normaler Formular-Versand
+
+  function show(text, ok) {
+    status.textContent = text;
+    status.className = 'form-status ' + (ok ? 'ok' : 'err');
     status.hidden = false;
   }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    var oldText = btn.textContent;
+    btn.textContent = 'Wird gesendet …';
+
+    var data = {};
+    new FormData(form).forEach(function (v, k) { data[k] = v; });
+
+    fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (res) {
+        if (res.success === true || res.success === 'true') {
+          form.reset();
+          show('Danke! Deine Nachricht ist angekommen, ich melde mich so schnell wie möglich.', true);
+        } else {
+          throw new Error('fail');
+        }
+      })
+      .catch(function () {
+        show('Das hat leider nicht geklappt. Bitte versuche es nochmal oder schreib mir per WhatsApp.', false);
+      })
+      .then(function () {
+        btn.disabled = false;
+        btn.textContent = oldText;
+      });
+  });
 })();
 </script>
 
