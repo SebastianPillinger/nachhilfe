@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Impressum – Sebastian Pillinger, MSc</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">Sebastian Pillinger, MSc</a>
+  <nav aria-label="Hauptmenü">
+    <a class="btn btn-small" href="index.html">Zur Startseite</a>
+  </nav>
+</header>
+
+<main class="legal">
+  <div class="wrap narrow">
+    <a class="legal-back" href="index.html">&larr; Zurück zur Startseite</a>
+    <h1>Impressum</h1>
+
+    <h2>Angaben gemäß § 5 E-Commerce-Gesetz und § 25 Mediengesetz</h2>
+    <address>
+      <strong>Sebastian Pillinger, MSc</strong><br>
+      Hauptstraße 26<br>
+      4563 Micheldorf<br>
+      Oberösterreich, Österreich
+    </address>
+    <p>
+      Telefon / WhatsApp: <a href="tel:+4367762026186">+43 677 62026186</a><br>
+      E-Mail: <a href="mailto:nachhilfe@sebastian-pillinger.at">nachhilfe@sebastian-pillinger.at</a>
+    </p>
+
+    <h2>Unternehmensgegenstand</h2>
+    <p>Online-Nachhilfe in Mathematik und Physik.</p>
+
+    <h2>Rechtliche Angaben</h2>
+    <p>
+      Unternehmensinhaber: Sebastian Pillinger, MSc<br>
+      Gewerbewortlaut: <span class="todo">[laut Gewerbeanmeldung ergänzen]</span><br>
+      UID-Nummer: <span class="todo">[falls vorhanden ergänzen, sonst Zeile löschen]</span><br>
+      Mitglied der Wirtschaftskammer Oberösterreich<br>
+      Aufsichts-/Gewerbebehörde: <span class="todo">[z. B. Bezirkshauptmannschaft Kirchdorf an der Krems, bitte prüfen]</span><br>
+      Anwendbare Rechtsvorschriften: Gewerbeordnung (abrufbar unter <a href="https://www.ris.bka.gv.at" target="_blank" rel="noopener">www.ris.bka.gv.at</a>)
+    </p>
+
+    <h2>Grundlegende Richtung der Website</h2>
+    <p>Information über das Nachhilfeangebot von Sebastian Pillinger, MSc, sowie Kontakt- und Zugangsmöglichkeit für Schülerinnen und Schüler.</p>
+
+    <h2>Haftung für Inhalte</h2>
+    <p>Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität kann jedoch keine Gewähr übernommen werden.</p>
+
+    <h2>Haftung für Links</h2>
+    <p>Diese Website kann Links zu externen Seiten enthalten, auf deren Inhalte kein Einfluss besteht. Für diese fremden Inhalte ist stets der jeweilige Anbieter verantwortlich. Bei Bekanntwerden von Rechtsverletzungen werden entsprechende Links umgehend entfernt.</p>
+
+    <h2>Urheberrecht</h2>
+    <p>Die Inhalte und Werke auf dieser Website (Texte, Bilder, Grafiken) unterliegen dem österreichischen Urheberrecht. Eine Vervielfältigung, Bearbeitung oder Verbreitung bedarf der schriftlichen Zustimmung des Urhebers.</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-bottom">
+    <p>&copy; 2026 Sebastian Pillinger, MSc &middot; <a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a> &middot; <a href="agb.html">AGB</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
