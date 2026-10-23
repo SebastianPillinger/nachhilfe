@@ -205,13 +205,37 @@ details p { margin: .75rem 0 0; color: var(--muted); }
   align-items: center;
 }
 
-.hero-qr-img {
-  max-width: 100%;
-  height: auto;
+.hero-qr {
+  margin: 0;
+  width: 100%;
+  max-width: 300px;
+  background: var(--white);
+  border: 2px solid var(--blue-mid);
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  background: var(--white);
-  padding: 0.5rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-qr-badge {
+  background: var(--blue-deep);
+  color: var(--white);
+  font-weight: 700;
+  font-size: .95rem;
+  padding: .5rem 1rem;
+}
+
+.hero-qr-img {
+  width: 100%;
+  max-height: 340px;
+  object-fit: contain;
+  padding: .75rem;
+}
+
+.hero-qr figcaption {
+  padding: 0 1rem .9rem;
+  font-size: .9rem;
+  color: var(--muted);
 }
 
 /* Kontakt-Bereich mit QR-Box */
@@ -299,4 +323,54 @@ details p { margin: .75rem 0 0; color: var(--muted); }
   .form-container {
     padding: 1.25rem;
   }
+}
+
+
+/* ========================================================= */
+/* Schüler-Login                                              */
+/* ========================================================= */
+
+/* Button in der Kopfzeile */
+.btn-login {
+  background: transparent;
+  color: var(--blue-deep);
+  border: 2px solid var(--blue-deep);
+  padding: .35rem 1rem;
+  white-space: nowrap;
+}
+.btn-login:hover { background: var(--blue-deep); color: var(--white); }
+
+/* Abschnitt */
+.login-section { text-align: center; }
+.login-section h2,
+.login-section > .wrap > p { margin-left: auto; margin-right: auto; }
+
+.login-card {
+  max-width: 420px;
+  margin: 2rem auto 0;
+  padding: 2rem;
+  background: var(--white);
+  border: 1px solid var(--blue-tint);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+.login-form { display: grid; gap: 1.2rem; }
+.login-form .form-group input { font-size: 1rem; }
+.login-error {
+  min-height: 1.4em;
+  margin: 0;
+  color: #b3261e;
+  font-size: .9rem;
+  font-weight: 600;
+}
+.login-note { text-align: center; margin: 1rem auto 0; }
+
+@media (max-width: 800px) {
+  .topbar { padding: .6rem 1rem; gap: .5rem; }
+  .brand { font-size: .9rem; }
+  .topbar nav { gap: .5rem; }
+  .btn-small, .btn-login { padding: .35rem .8rem; font-size: .85rem; }
+  .login-card { padding: 1.25rem; }
+  .hero-qr { max-width: 260px; }
 }
