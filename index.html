@@ -16,7 +16,7 @@
     <a href="#whiteboard">Whiteboard</a>
     <a href="#ueber-mich">Über mich</a>
     <a href="#faq">Fragen</a>
-    <a href="https://www.notion.so" target="_blank" rel="noopener">Schüler-Login</a>
+    <a class="btn btn-small btn-login" href="#schueler-login">Schüler-Login</a>
     <a class="btn btn-small" href="#kontakt">Kontakt</a>
   </nav>
 </header>
@@ -34,6 +34,7 @@
       
       <!-- CTA Buttons: WhatsApp + E-Mail Formular -->
       <div class="hero-buttons">
+        <a class="btn" href="https://wa.me/43XXXXXXXXXX" target="_blank" rel="noopener">Per WhatsApp schreiben</a>
         <a class="btn btn-secondary" href="#kontaktformular">E-Mail schreiben</a>
       </div>
       <p class="hint">Gratis Probeeinheit &middot; Unverbindlich &amp; schnell</p>
@@ -41,7 +42,11 @@
 
     <!-- Bild NH_GratisProbeeinheit.png oben rechts / im Hero -->
     <div class="hero-image-wrap">
-      <img src="bilder/NH_GratisProbeeinheit.png" alt="Gratis Probeeinheit QR-Code und Details" class="hero-qr-img">
+      <figure class="hero-qr">
+        <div class="hero-qr-badge">Gratis Probeeinheit</div>
+        <img src="bilder/NH_GratisProbeeinheit.png" alt="QR-Code: scannen und gratis Probeeinheit erhalten" class="hero-qr-img">
+        <figcaption>QR-Code scannen und per WhatsApp deine gratis Probeeinheit sichern</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -126,6 +131,33 @@
   </section>
 
 <!-- ========================================================= -->
+<!-- SCHÜLER-LOGIN                                             -->
+<!-- ========================================================= -->
+<section id="schueler-login" class="section tint login-section">
+  <div class="wrap narrow">
+    <h2>Schüler-Login</h2>
+    <p>Hier findest du deine Mitschriften und Unterlagen. Melde dich mit den Zugangsdaten an, die du von mir bekommen hast.</p>
+
+    <div class="login-card">
+      <form id="login-form" class="login-form" novalidate>
+        <div class="form-group">
+          <label for="login-user">Benutzername</label>
+          <input type="text" id="login-user" name="username" autocomplete="username"
+                 autocapitalize="none" autocorrect="off" spellcheck="false" required>
+        </div>
+        <div class="form-group">
+          <label for="login-pass">Passwort</label>
+          <input type="password" id="login-pass" name="password" autocomplete="current-password" required>
+        </div>
+        <p id="login-error" class="login-error" role="alert" aria-live="polite"></p>
+        <button type="submit" class="btn btn-full">Zu meinen Unterlagen</button>
+      </form>
+    </div>
+    <p class="hint login-note">Noch keine Zugangsdaten? Schreib mir kurz, dann richte ich sie dir ein.</p>
+  </div>
+</section>
+
+<!-- ========================================================= -->
 <!-- 2. KONTAKT- / FORMULAR-SEKTION (Ersetzt die alte Kontakt) -->
 <!-- ========================================================= -->
 <section id="kontakt" class="section contact">
@@ -133,22 +165,22 @@
     <div>
       <h2>Jetzt gratis Probeeinheit vereinbaren</h2>
       <p>Scanne den QR-Code mit deinem Smartphone oder schreibe mir direkt über das Formular bzw. per WhatsApp.</p>
-      <a class="btn btn-whatsapp" href="https://wa.me/43XXXXXXXXXX" target="_blank" rel="noopener">
+      <a class="btn" href="https://wa.me/43XXXXXXXXXX" target="_blank" rel="noopener">
         Per WhatsApp schreiben
       </a>
-      <p class="hint">Oder direkt per Mail: <a href="mailto:kontakt@beispiel.at">kontakt@beispiel.at</a></p>
+      <p class="hint">Oder direkt per Mail: <a href="mailto:nachhilfe@sebastian-pillinger.at">nachhilfe@sebastian-pillinger.at</a></p>
     </div>
 
     <!-- Bild / QR-Code Anzeige -->
     <div class="qr-box">
-      <img class="qr" src="NH_GratisProbeeinheit.png" alt="QR-Code Gratis Probeeinheit" width="280">
+      <img class="qr" src="bilder/NH_GratisProbeeinheit.png" alt="QR-Code: scannen und gratis Probeeinheit erhalten" width="280" height="280" loading="lazy">
     </div>
   </div>
 
   <!-- Integriertes E-Mail Formular -->
   <div id="kontaktformular" class="wrap narrow form-container">
     <h3>Direkt eine Nachricht senden</h3>
-    <form action="mailto:kontakt@beispiel.at" method="post" enctype="text/plain" class="contact-form">
+    <form action="mailto:nachhilfe@sebastian-pillinger.at" method="post" enctype="text/plain" class="contact-form">
       <div class="form-group">
         <label for="name">Dein Name / Name des Schülers:</label>
         <input type="text" id="name" name="Name" required placeholder="z. B. Max Mustermann">
@@ -206,6 +238,40 @@
     <p>&copy; 2026 Sebastian Pillinger, MSc &middot; Hauptstraße 26, 4563 Micheldorf, Ober&ouml;sterreich</p>
   </div>
 </footer>
+
+<script>
+(function () {
+  var form = document.getElementById('login-form');
+  var error = document.getElementById('login-error');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    error.textContent = '';
+
+    var user = form.elements['username'].value.trim();
+    var pass = form.elements['password'].value;
+
+    // Nur sichere Zeichen im Benutzernamen (verhindert z. B. "../" im Pfad)
+    if (!/^[A-Za-z0-9_-]{1,40}$/.test(user) || !pass) {
+      error.textContent = 'Bitte Benutzername und Passwort eingeben.';
+      return;
+    }
+
+    // Zugangsdaten nur über HTTPS senden (lokales Testen erlaubt)
+    var local = ['localhost', '127.0.0.1'].indexOf(location.hostname) !== -1;
+    if (location.protocol !== 'https:' && !local) {
+      error.textContent = 'Login nur über eine gesicherte Verbindung (https) möglich.';
+      return;
+    }
+
+    var u = encodeURIComponent(user);
+    var p = encodeURIComponent(pass);
+    window.location.href = location.protocol + '//' + u + ':' + p + '@' +
+      location.host + '/schueler/' + u + '/';
+  });
+})();
+</script>
 
 </body>
 </html>
