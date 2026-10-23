@@ -374,3 +374,23 @@ details p { margin: .75rem 0 0; color: var(--muted); }
   .login-card { padding: 1.25rem; }
   .hero-qr { max-width: 260px; }
 }
+
+
+/* ========================================================= */
+/* Klickbarer QR-Code, Formular-Feinschliff                   */
+/* ========================================================= */
+.qr-link { display: block; border-radius: 12px; transition: transform .2s; }
+.qr-link:hover { transform: scale(1.02); }
+.qr-box .qr-link { max-width: 280px; }
+.qr-box .qr { width: 100%; height: auto; }
+
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+.form-check { display: flex; gap: .75rem; align-items: flex-start; font-size: .9rem; color: var(--muted); }
+.form-check input { margin-top: .3rem; flex: none; width: 1.1rem; height: 1.1rem; accent-color: var(--blue-deep); }
+
+.form-status { margin: 0; padding: .8rem 1rem; border-radius: 8px; font-weight: 600; max-width: none; }
+.form-status.ok { background: #e6f4ea; color: #1e6b34; }
+.form-status.err { background: #fdecea; color: #b3261e; }
+
+@media (prefers-reduced-motion: reduce) { .qr-link { transition: none; } }
