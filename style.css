@@ -174,3 +174,129 @@ details p { margin: .75rem 0 0; color: var(--muted); }
   html { scroll-behavior: auto; }
   .btn { transition: none; }
 }
+
+/* ========================================================= */
+/* Ergänzungen für Hero-Bild, Buttons und Kontaktformular     */
+/* ========================================================= */
+
+/* Hero-Button Anordnung */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--blue-deep);
+  border: 2px solid var(--blue-deep);
+}
+
+.btn-secondary:hover {
+  background: var(--blue-deep);
+  color: var(--white);
+}
+
+/* Hero PNG Styling */
+.hero-image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-qr-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background: var(--white);
+  padding: 0.5rem;
+}
+
+/* Kontakt-Bereich mit QR-Box */
+.qr-box {
+  display: flex;
+  justify-content: center;
+}
+
+.qr-box img {
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Formular Styling */
+.form-container {
+  margin-top: 3.5rem;
+  padding: 2rem;
+  background: var(--white);
+  border: 1px solid var(--blue-tint);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-container h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--blue-deep);
+  font-size: 1.4rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--grey-hex);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--blue-deep);
+  box-shadow: 0 0 0 3px var(--blue-tint);
+}
+
+.btn-full {
+  width: 100%;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-size: 1.05rem;
+}
+
+/* Mobile Optimierungen */
+@media (max-width: 800px) {
+  .hero-buttons {
+    flex-direction: column;
+  }
+  
+  .hero-buttons .btn {
+    text-align: center;
+    width: 100%;
+  }
+
+  .form-container {
+    padding: 1.25rem;
+  }
+}
