@@ -34,7 +34,7 @@
       
       <!-- CTA Buttons: WhatsApp + E-Mail Formular -->
       <div class="hero-buttons">
-        <a class="btn" href="https://wa.me/43XXXXXXXXXX" target="_blank" rel="noopener">Per WhatsApp schreiben</a>
+        <a class="btn" href="https://wa.me/4367762026186?text=Hallo%2C%20ich%20m%C3%B6chte%20meine%20gratis%20Probeeinheit%20vereinbaren." target="_blank" rel="noopener">Per WhatsApp schreiben</a>
         <a class="btn btn-secondary" href="#kontaktformular">E-Mail schreiben</a>
       </div>
       <p class="hint">Gratis Probeeinheit &middot; Unverbindlich &amp; schnell</p>
@@ -44,8 +44,10 @@
     <div class="hero-image-wrap">
       <figure class="hero-qr">
         <div class="hero-qr-badge">Gratis Probeeinheit</div>
-        <img src="bilder/NH_GratisProbeeinheit.png" alt="QR-Code: scannen und gratis Probeeinheit erhalten" class="hero-qr-img">
-        <figcaption>QR-Code scannen und per WhatsApp deine gratis Probeeinheit sichern</figcaption>
+        <a class="qr-link" href="https://wa.me/4367762026186?text=Hallo%2C%20ich%20m%C3%B6chte%20meine%20gratis%20Probeeinheit%20vereinbaren." target="_blank" rel="noopener" aria-label="Per WhatsApp schreiben und gratis Probeeinheit sichern">
+          <img src="bilder/NH_GratisProbeeinheit.png" alt="QR-Code: scannen und gratis Probeeinheit erhalten" class="hero-qr-img">
+        </a>
+        <figcaption>QR-Code scannen oder antippen und per WhatsApp deine gratis Probeeinheit sichern</figcaption>
       </figure>
     </div>
   </div>
@@ -136,7 +138,7 @@
 <section id="schueler-login" class="section tint login-section">
   <div class="wrap narrow">
     <h2>Schüler-Login</h2>
-    <p>Hier findest du deine Mitschriften und Unterlagen. Melde dich mit den Zugangsdaten an, die du von mir bekommen hast.</p>
+    <p>Hier findest du deine Mitschriften und Unterlagen. Gib deinen Benutzernamen ein, das Passwort fragt dein Browser im nächsten Schritt ab.</p>
 
     <div class="login-card">
       <form id="login-form" class="login-form" novalidate>
@@ -144,10 +146,6 @@
           <label for="login-user">Benutzername</label>
           <input type="text" id="login-user" name="username" autocomplete="username"
                  autocapitalize="none" autocorrect="off" spellcheck="false" required>
-        </div>
-        <div class="form-group">
-          <label for="login-pass">Passwort</label>
-          <input type="password" id="login-pass" name="password" autocomplete="current-password" required>
         </div>
         <p id="login-error" class="login-error" role="alert" aria-live="polite"></p>
         <button type="submit" class="btn btn-full">Zu meinen Unterlagen</button>
@@ -165,7 +163,7 @@
     <div>
       <h2>Jetzt gratis Probeeinheit vereinbaren</h2>
       <p>Scanne den QR-Code mit deinem Smartphone oder schreibe mir direkt über das Formular bzw. per WhatsApp.</p>
-      <a class="btn" href="https://wa.me/43XXXXXXXXXX" target="_blank" rel="noopener">
+      <a class="btn" href="https://wa.me/4367762026186?text=Hallo%2C%20ich%20m%C3%B6chte%20meine%20gratis%20Probeeinheit%20vereinbaren." target="_blank" rel="noopener">
         Per WhatsApp schreiben
       </a>
       <p class="hint">Oder direkt per Mail: <a href="mailto:nachhilfe@sebastian-pillinger.at">nachhilfe@sebastian-pillinger.at</a></p>
@@ -173,33 +171,43 @@
 
     <!-- Bild / QR-Code Anzeige -->
     <div class="qr-box">
-      <img class="qr" src="bilder/NH_GratisProbeeinheit.png" alt="QR-Code: scannen und gratis Probeeinheit erhalten" width="280" height="280" loading="lazy">
+      <a class="qr-link" href="https://wa.me/4367762026186?text=Hallo%2C%20ich%20m%C3%B6chte%20meine%20gratis%20Probeeinheit%20vereinbaren." target="_blank" rel="noopener" aria-label="Per WhatsApp schreiben und gratis Probeeinheit sichern">
+        <img class="qr" src="bilder/NH_GratisProbeeinheit.png" alt="QR-Code: scannen und gratis Probeeinheit erhalten" width="280" height="280" loading="lazy">
+      </a>
     </div>
   </div>
 
   <!-- Integriertes E-Mail Formular -->
   <div id="kontaktformular" class="wrap narrow form-container">
     <h3>Direkt eine Nachricht senden</h3>
-    <form action="mailto:nachhilfe@sebastian-pillinger.at" method="post" enctype="text/plain" class="contact-form">
+    <form action="kontakt.php" method="post" class="contact-form">
+      <p id="form-status" class="form-status" role="status" aria-live="polite" hidden></p>
+      <!-- Spam-Falle: für Menschen unsichtbar -->
+      <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
       <div class="form-group">
         <label for="name">Dein Name / Name des Schülers:</label>
-        <input type="text" id="name" name="Name" required placeholder="z. B. Max Mustermann">
+        <input type="text" id="name" name="name" required placeholder="z. B. Max Mustermann">
       </div>
       
       <div class="form-group">
         <label for="email">Deine E-Mail-Adresse:</label>
-        <input type="email" id="email" name="E-Mail" required placeholder="name@beispiel.at">
+        <input type="email" id="email" name="email" required placeholder="name@beispiel.at">
       </div>
 
       <div class="form-group">
         <label for="fach">Klasse / Fach:</label>
-        <input type="text" id="fach" name="Fach_Klasse" placeholder="z. B. 7. Klasse AHS – Mathematik">
+        <input type="text" id="fach" name="fach" placeholder="z. B. 7. Klasse AHS – Mathematik">
       </div>
 
       <div class="form-group">
         <label for="message">Deine Nachricht:</label>
-        <textarea id="message" name="Nachricht" rows="4" required placeholder="Worum geht es oder wann hättest du Zeit für die Probeeinheit?"></textarea>
+        <textarea id="message" name="nachricht" rows="4" required placeholder="Worum geht es oder wann hättest du Zeit für die Probeeinheit?"></textarea>
       </div>
+
+      <label class="form-check">
+        <input type="checkbox" name="datenschutz" required>
+        <span>Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage verwendet werden.</span>
+      </label>
 
       <button type="submit" class="btn btn-full">E-Mail absenden</button>
     </form>
@@ -225,7 +233,7 @@
     <div>
       <h3>Kontakt</h3>
       <div class="social">
-        <a href="https://wa.me/43XXXXXXXXXX" rel="noopener" aria-label="WhatsApp">
+        <a href="https://wa.me/4367762026186?text=Hallo%2C%20ich%20m%C3%B6chte%20meine%20gratis%20Probeeinheit%20vereinbaren." rel="noopener" aria-label="WhatsApp">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
         </a>
         <a href="mailto:nachhilfe@sebastian-pillinger.at" aria-label="E-Mail">
@@ -240,6 +248,7 @@
 </footer>
 
 <script>
+// Schüler-Login: leitet zum geschützten Ordner weiter, den Passwort-Dialog zeigt der Browser
 (function () {
   var form = document.getElementById('login-form');
   var error = document.getElementById('login-error');
@@ -248,28 +257,31 @@
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     error.textContent = '';
-
     var user = form.elements['username'].value.trim();
-    var pass = form.elements['password'].value;
 
-    // Nur sichere Zeichen im Benutzernamen (verhindert z. B. "../" im Pfad)
-    if (!/^[A-Za-z0-9_-]{1,40}$/.test(user) || !pass) {
-      error.textContent = 'Bitte Benutzername und Passwort eingeben.';
+    // Nur sichere Zeichen (verhindert z. B. "../" im Pfad)
+    if (!/^[A-Za-z0-9_-]{1,40}$/.test(user)) {
+      error.textContent = 'Bitte gib deinen Benutzernamen ein (nur Buchstaben, Ziffern, - und _).';
       return;
     }
-
-    // Zugangsdaten nur über HTTPS senden (lokales Testen erlaubt)
-    var local = ['localhost', '127.0.0.1'].indexOf(location.hostname) !== -1;
-    if (location.protocol !== 'https:' && !local) {
-      error.textContent = 'Login nur über eine gesicherte Verbindung (https) möglich.';
-      return;
-    }
-
-    var u = encodeURIComponent(user);
-    var p = encodeURIComponent(pass);
-    window.location.href = location.protocol + '//' + u + ':' + p + '@' +
-      location.host + '/schueler/' + u + '/';
+    window.location.href = '/schueler/' + encodeURIComponent(user) + '/';
   });
+})();
+
+// Kontaktformular: Rückmeldung nach dem Absenden
+(function () {
+  var status = document.getElementById('form-status');
+  if (!status) return;
+  var params = new URLSearchParams(location.search);
+  if (params.has('gesendet')) {
+    status.textContent = 'Danke! Deine Nachricht ist angekommen, ich melde mich so schnell wie möglich.';
+    status.className = 'form-status ok';
+    status.hidden = false;
+  } else if (params.has('fehler')) {
+    status.textContent = 'Das hat leider nicht geklappt. Bitte prüfe deine Angaben oder schreib mir per WhatsApp.';
+    status.className = 'form-status err';
+    status.hidden = false;
+  }
 })();
 </script>
 
