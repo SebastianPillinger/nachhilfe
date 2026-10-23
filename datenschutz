@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datenschutz – Sebastian Pillinger, MSc</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">Sebastian Pillinger, MSc</a>
+  <nav aria-label="Hauptmenü">
+    <a class="btn btn-small" href="index.html">Zur Startseite</a>
+  </nav>
+</header>
+
+<main class="legal">
+  <div class="wrap narrow">
+    <a class="legal-back" href="index.html">&larr; Zurück zur Startseite</a>
+    <h1>Datenschutzerklärung</h1>
+    <p>Der Schutz deiner Daten ist mir wichtig. Hier erfährst du, welche personenbezogenen Daten beim Besuch dieser Website und bei der Nachhilfe verarbeitet werden. Grundlage sind die Datenschutz-Grundverordnung (DSGVO) und das österreichische Datenschutzgesetz (DSG).</p>
+
+    <h2>1. Verantwortlicher</h2>
+    <address>
+      Sebastian Pillinger, MSc<br>
+      Hauptstraße 26, 4563 Micheldorf, Österreich<br>
+      E-Mail: <a href="mailto:nachhilfe@sebastian-pillinger.at">nachhilfe@sebastian-pillinger.at</a><br>
+      Telefon: +43 677 62026186
+    </address>
+
+    <h2>2. Hosting und Server-Logfiles</h2>
+    <p>Diese Website wird bei easyname (easyname GmbH, Wien) gehostet. Beim Aufruf der Seite verarbeitet der Webserver technisch notwendige Daten, z. B. IP-Adresse, Datum und Uhrzeit, aufgerufene Seite und Browsertyp (Server-Logfiles). Das dient dem sicheren und stabilen Betrieb der Website.</p>
+    <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren Betrieb). Die Logfiles werden nur so lange gespeichert, wie es der Hoster für den Betrieb benötigt. Mit easyname besteht ein Auftragsverarbeitungsverhältnis.</p>
+
+    <h2>3. Cookies und Tracking</h2>
+    <p>Diese Website verwendet keine Cookies zu Analyse- oder Werbezwecken und setzt keine Tracking-Tools ein. Es werden keine externen Schriftarten oder Skripte von Drittanbietern geladen.</p>
+
+    <h2>4. Kontaktaufnahme</h2>
+    <h3>Kontaktformular (FormSubmit)</h3>
+    <p>Wenn du das Kontaktformular nutzt, werden deine Angaben (Name, E-Mail-Adresse, Klasse/Fach, Nachricht) über den Dienst FormSubmit (formsubmit.co) als E-Mail an mich weitergeleitet. FormSubmit verarbeitet die Daten dabei als Dienstleister in meinem Auftrag; eine Verarbeitung außerhalb der EU/des EWR ist möglich. Die Übermittlung erfolgt verschlüsselt.</p>
+    <h3>E-Mail</h3>
+    <p>Bei Kontakt per E-Mail werden deine Nachricht und deine E-Mail-Adresse zur Bearbeitung der Anfrage gespeichert. Mein E-Mail-Postfach wird bei Zoho gehostet.</p>
+    <h3>WhatsApp</h3>
+    <p>Du kannst mich über WhatsApp kontaktieren, auch über die Links und den QR-Code auf dieser Seite. Erst beim Klick bzw. Scannen wirst du zu WhatsApp (Meta Platforms Ireland Ltd., Dublin) weitergeleitet. Dabei gilt zusätzlich die Datenschutzerklärung von WhatsApp. Die Nutzung ist freiwillig, alternativ kannst du das Formular oder E-Mail verwenden.</p>
+    <p>Rechtsgrundlage für alle Kontaktwege ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung und Durchführung eines Vertrags) bzw. lit. f DSGVO (Beantwortung von Anfragen). Deine Angaben werden gelöscht, sobald die Anfrage erledigt ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+
+    <h2>5. Nachhilfeunterricht und Schüler-Bereich</h2>
+    <p>Wenn du Nachhilfe bei mir nimmst, verarbeite ich die Daten, die für Organisation und Durchführung nötig sind, z. B. Name, Kontaktdaten, Klasse/Schulstufe, Fach, Termine und Unterrichtsinhalte (Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO). Rechnungsrelevante Daten bewahre ich entsprechend den gesetzlichen Fristen auf (Art. 6 Abs. 1 lit. c DSGVO).</p>
+    <p>Die Unterlagen (z. B. Mitschriften als PDF) liegen in einem passwortgeschützten Ordner auf dem Webserver. Zugangsdaten erhältst du von mir. Der Schutz erfolgt über die Zugangskontrolle des Webservers (HTTP-Authentifizierung). Dabei werden keine Cookies gesetzt, und deine Zugangsdaten werden nur zur Anmeldung am Server verwendet.</p>
+    <p>Bei Schülerinnen und Schülern unter 14 Jahren erfolgt die Verarbeitung im Einvernehmen mit den Erziehungsberechtigten.</p>
+
+    <h2>6. Empfänger der Daten</h2>
+    <p>Daten werden nur an Dienstleister weitergegeben, die für den Betrieb notwendig sind: Hoster (easyname), E-Mail-Anbieter (Zoho), Formular-Dienst (FormSubmit) und, wenn du sie nutzt, WhatsApp. Eine darüber hinausgehende Weitergabe an Dritte findet nicht statt.</p>
+
+    <h2>7. Deine Rechte</h2>
+    <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Eine erteilte Einwilligung kannst du jederzeit mit Wirkung für die Zukunft widerrufen. Schreib dazu einfach an <a href="mailto:nachhilfe@sebastian-pillinger.at">nachhilfe@sebastian-pillinger.at</a>.</p>
+    <p>Wenn du der Meinung bist, dass die Verarbeitung deiner Daten gegen Datenschutzrecht verstößt, kannst du dich bei der Aufsichtsbehörde beschweren: Österreichische Datenschutzbehörde, Barichgasse 40–42, 1030 Wien, <a href="https://www.dsb.gv.at" target="_blank" rel="noopener">www.dsb.gv.at</a>.</p>
+
+    <h2>8. Stand</h2>
+    <p>Stand: Oktober 2026. Diese Erklärung wird angepasst, wenn sich die Website oder die Rechtslage ändert.</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-bottom">
+    <p>&copy; 2026 Sebastian Pillinger, MSc &middot; <a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a> &middot; <a href="agb.html">AGB</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
