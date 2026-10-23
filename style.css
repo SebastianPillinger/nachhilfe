@@ -394,3 +394,21 @@ details p { margin: .75rem 0 0; color: var(--muted); }
 .form-status.err { background: #fdecea; color: #b3261e; }
 
 @media (prefers-reduced-motion: reduce) { .qr-link { transition: none; } }
+
+
+/* Hinweis unter dem Formular */
+.form-note { margin: 0; font-size: .9rem; color: var(--muted); max-width: none; }
+.btn-full:disabled { opacity: .7; cursor: wait; }
+
+/* ========================================================= */
+/* Rechtsseiten (Impressum, Datenschutz)                      */
+/* ========================================================= */
+.legal { padding: 3rem 0 4rem; }
+.legal h1 { font-size: clamp(2rem, 5vw, 2.8rem); color: var(--blue-deep); }
+.legal h2 { font-size: 1.35rem; margin-top: 2.2rem; }
+.legal h3 { font-size: 1.05rem; margin: 1.4rem 0 .4rem; }
+.legal p, .legal li { max-width: 70ch; }
+.legal ul { padding-left: 1.2rem; margin: 0 0 1rem; }
+.legal address { font-style: normal; margin-bottom: 1rem; }
+.legal .todo { background: #fff3cd; padding: 0 .25rem; border-radius: 3px; }
+.legal-back { display: inline-block; margin-bottom: 1.5rem; font-weight: 700; text-decoration: none; }
