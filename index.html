@@ -22,17 +22,29 @@
 
 <main id="top">
 
-  <!-- Einstieg -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <h1>Mathematik &amp; Physik Nachhilfe</h1>
-        <p class="lead">Klar erklärt, strukturiert und zielgerichtet bis zur Matura. Online, live und direkt mit dir.</p>
-        <a class="btn" href="https://wa.me/43XXXXXXXXXX" rel="noopener">Gratis Probeeinheit vereinbaren</a>
-        <p class="hint">Unverbindlich, per WhatsApp</p>
+<!-- ========================================================= -->
+<!-- 1. HERO-SEKTION (Oben in index.html)                      -->
+<!-- ========================================================= -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Mathematik &amp; Physik Nachhilfe</h1>
+      <p class="lead">Klar erklärt, strukturiert und zielgerichtet bis zur Matura. Online, live und direkt mit dir.</p>
+      
+      <!-- CTA Buttons: WhatsApp + E-Mail Formular -->
+      <div class="hero-buttons">
+        <a class="btn" href="https://wa.me/43XXXXXXXXXX" target="_blank" rel="noopener">Per WhatsApp anfragen</a>
+        <a class="btn btn-secondary" href="#kontaktformular">E-Mail schreiben</a>
       </div>
+      <p class="hint">Gratis Probeeinheit &middot; Unverbindlich &amp; schnell</p>
     </div>
-  </section>
+
+    <!-- Bild NH_GratisProbeeinheit.png oben rechts / im Hero -->
+    <div class="hero-image-wrap">
+      <img src="NH_GratisProbeeinheit.png" alt="Gratis Probeeinheit QR-Code und Details" class="hero-qr-img">
+    </div>
+  </div>
+</section>
 
   <!-- Angebot -->
   <section id="angebot" class="section">
@@ -113,18 +125,54 @@
     </div>
   </section>
 
-  <!-- Kontakt -->
-  <section id="kontakt" class="section contact">
-    <div class="wrap contact-grid">
-      <div>
-        <h2>Jetzt gratis Probeeinheit vereinbaren</h2>
-        <p>Scanne den QR-Code oder schreib mir direkt per WhatsApp.</p>
-        <a class="btn" href="https://wa.me/43XXXXXXXXXX" rel="noopener">Per WhatsApp schreiben</a>
-        <p class="hint">Oder per Mail: <a href="mailto:kontakt@beispiel.at">kontakt@beispiel.at</a></p>
-      </div>
-      <img class="qr" src="bilder/whatsapp-qr.png" alt="QR-Code zum WhatsApp-Kontakt" width="200" height="200">
+<!-- ========================================================= -->
+<!-- 2. KONTAKT- / FORMULAR-SEKTION (Ersetzt die alte Kontakt) -->
+<!-- ========================================================= -->
+<section id="kontakt" class="section contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Jetzt gratis Probeeinheit vereinbaren</h2>
+      <p>Scanne den QR-Code mit deinem Smartphone oder schreibe mir direkt über das Formular bzw. per WhatsApp.</p>
+      <a class="btn btn-whatsapp" href="https://wa.me/43XXXXXXXXXX" target="_blank" rel="noopener">
+        Per WhatsApp schreiben
+      </a>
+      <p class="hint">Oder direkt per Mail: <a href="mailto:kontakt@beispiel.at">kontakt@beispiel.at</a></p>
     </div>
-  </section>
+
+    <!-- Bild / QR-Code Anzeige -->
+    <div class="qr-box">
+      <img class="qr" src="NH_GratisProbeeinheit.png" alt="QR-Code Gratis Probeeinheit" width="280">
+    </div>
+  </div>
+
+  <!-- Integriertes E-Mail Formular -->
+  <div id="kontaktformular" class="wrap narrow form-container">
+    <h3>Direkt eine Nachricht senden</h3>
+    <form action="mailto:kontakt@beispiel.at" method="post" enctype="text/plain" class="contact-form">
+      <div class="form-group">
+        <label for="name">Dein Name / Name des Schülers:</label>
+        <input type="text" id="name" name="Name" required placeholder="z. B. Max Mustermann">
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Deine E-Mail-Adresse:</label>
+        <input type="email" id="email" name="E-Mail" required placeholder="name@beispiel.at">
+      </div>
+
+      <div class="form-group">
+        <label for="fach">Klasse / Fach:</label>
+        <input type="text" id="fach" name="Fach_Klasse" placeholder="z. B. 7. Klasse AHS – Mathematik">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Deine Nachricht:</label>
+        <textarea id="message" name="Nachricht" rows="4" required placeholder="Worum geht es oder wann hättest du Zeit für die Probeeinheit?"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-full">E-Mail absenden</button>
+    </form>
+  </div>
+</section>
 
 </main>
 
