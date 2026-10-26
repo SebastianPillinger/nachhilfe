@@ -412,3 +412,8 @@ details p { margin: .75rem 0 0; color: var(--muted); }
 .legal address { font-style: normal; margin-bottom: 1rem; }
 .legal .todo { background: #fff3cd; padding: 0 .25rem; border-radius: 3px; }
 .legal-back { display: inline-block; margin-bottom: 1.5rem; font-weight: 700; text-decoration: none; }
+
+/* Unterlagen-Karte */
+.login-card ol { margin: 0 0 1.5rem; padding-left: 1.2rem; }
+.login-card li { margin-bottom: .5rem; }
+.login-card .btn-full { display: block; }
