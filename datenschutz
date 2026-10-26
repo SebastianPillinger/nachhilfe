@@ -31,8 +31,8 @@
     </address>
 
     <h2>2. Hosting und Server-Logfiles</h2>
-    <p>Diese Website wird bei easyname (easyname GmbH, Wien) gehostet. Beim Aufruf der Seite verarbeitet der Webserver technisch notwendige Daten, z. B. IP-Adresse, Datum und Uhrzeit, aufgerufene Seite und Browsertyp (Server-Logfiles). Das dient dem sicheren und stabilen Betrieb der Website.</p>
-    <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren Betrieb). Die Logfiles werden nur so lange gespeichert, wie es der Hoster für den Betrieb benötigt. Mit easyname besteht ein Auftragsverarbeitungsverhältnis.</p>
+    <p>Diese Website wird über GitHub Pages bereitgestellt (GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA, ein Unternehmen von Microsoft). Beim Aufruf der Seite verarbeitet GitHub technisch notwendige Daten, vor allem die IP-Adresse, Datum und Uhrzeit sowie Angaben zu Browser und aufgerufener Seite, um die Seite auszuliefern und sicher zu betreiben.</p>
+    <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer sicheren und stabilen Bereitstellung der Website). Eine Datenübermittlung in die USA ist möglich. Details zu Garantien und Speicherdauer findest du in der Datenschutzerklärung von GitHub.</p>
 
     <h2>3. Cookies und Tracking</h2>
     <p>Diese Website verwendet keine Cookies zu Analyse- oder Werbezwecken und setzt keine Tracking-Tools ein. Es werden keine externen Schriftarten oder Skripte von Drittanbietern geladen.</p>
@@ -48,11 +48,11 @@
 
     <h2>5. Nachhilfeunterricht und Schüler-Bereich</h2>
     <p>Wenn du Nachhilfe bei mir nimmst, verarbeite ich die Daten, die für Organisation und Durchführung nötig sind, z. B. Name, Kontaktdaten, Klasse/Schulstufe, Fach, Termine und Unterrichtsinhalte (Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO). Rechnungsrelevante Daten bewahre ich entsprechend den gesetzlichen Fristen auf (Art. 6 Abs. 1 lit. c DSGVO).</p>
-    <p>Die Unterlagen (z. B. Mitschriften als PDF) liegen in einem passwortgeschützten Ordner auf dem Webserver. Zugangsdaten erhältst du von mir. Der Schutz erfolgt über die Zugangskontrolle des Webservers (HTTP-Authentifizierung). Dabei werden keine Cookies gesetzt, und deine Zugangsdaten werden nur zur Anmeldung am Server verwendet.</p>
+    <p>Die Unterlagen (z. B. Mitschriften als PDF) stelle ich dir über Google Drive bereit (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland; teils auch Google LLC, USA). Den Zugriff steuere ich über die Freigabe für dein Google-Konto oder über einen persönlichen Link. Für die Nutzung von Google gilt zusätzlich die Datenschutzerklärung von Google. Möchtest du keine Daten bei Google, schicke ich dir die PDFs stattdessen per WhatsApp oder E-Mail.</p>
     <p>Bei Schülerinnen und Schülern unter 14 Jahren erfolgt die Verarbeitung im Einvernehmen mit den Erziehungsberechtigten.</p>
 
     <h2>6. Empfänger der Daten</h2>
-    <p>Daten werden nur an Dienstleister weitergegeben, die für den Betrieb notwendig sind: Hoster (easyname), E-Mail-Anbieter (Zoho), Formular-Dienst (FormSubmit) und, wenn du sie nutzt, WhatsApp. Eine darüber hinausgehende Weitergabe an Dritte findet nicht statt.</p>
+    <p>Daten werden nur an Dienstleister weitergegeben, die für den Betrieb notwendig sind: Hoster (GitHub), E-Mail-Anbieter (Zoho), Formular-Dienst (FormSubmit), Google Drive für die Unterlagen und, wenn du es nutzt, WhatsApp. Eine darüber hinausgehende Weitergabe an Dritte findet nicht statt.</p>
 
     <h2>7. Deine Rechte</h2>
     <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Eine erteilte Einwilligung kannst du jederzeit mit Wirkung für die Zukunft widerrufen. Schreib dazu einfach an <a href="mailto:nachhilfe@sebastian-pillinger.at">nachhilfe@sebastian-pillinger.at</a>.</p>
