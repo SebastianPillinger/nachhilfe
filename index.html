@@ -16,7 +16,7 @@
     <a href="#whiteboard">Whiteboard</a>
     <a href="#ueber-mich">Über mich</a>
     <a href="#faq">Fragen</a>
-    <a class="btn btn-small btn-login" href="#schueler-login">Schüler-Login</a>
+    <a class="btn btn-small btn-login" href="#schueler-login">Meine Unterlagen</a>
     <a class="btn btn-small" href="#kontakt">Kontakt</a>
   </nav>
 </header>
@@ -137,21 +137,18 @@
 <!-- ========================================================= -->
 <section id="schueler-login" class="section tint login-section">
   <div class="wrap narrow">
-    <h2>Schüler-Login</h2>
-    <p>Hier findest du deine Mitschriften und Unterlagen. Gib deinen Benutzernamen ein, das Passwort fragt dein Browser im nächsten Schritt ab.</p>
+    <h2>Meine Unterlagen</h2>
+    <p>Nach jeder Einheit bekommst du deine Mitschrift als PDF. Alles liegt in deinem persönlichen Ordner auf Google Drive.</p>
 
     <div class="login-card">
-      <form id="login-form" class="login-form" novalidate>
-        <div class="form-group">
-          <label for="login-user">Benutzername</label>
-          <input type="text" id="login-user" name="username" autocomplete="username"
-                 autocapitalize="none" autocorrect="off" spellcheck="false" required>
-        </div>
-        <p id="login-error" class="login-error" role="alert" aria-live="polite"></p>
-        <button type="submit" class="btn btn-full">Zu meinen Unterlagen</button>
-      </form>
+      <p><strong>So kommst du zu deinen Unterlagen</strong></p>
+      <ol>
+        <li>Nach der ersten Einheit schicke ich dir den Link zu deinem Ordner.</li>
+        <li>Speichere den Link als Lesezeichen oder am Startbildschirm deines Handys.</li>
+        <li>Link verloren? Schreib mir kurz, ich schicke ihn dir nochmal.</li>
+      </ol>
+      <a class="btn btn-full" href="https://wa.me/4367762026186?text=Hallo%2C%20ich%20brauche%20den%20Link%20zu%20meinen%20Unterlagen." target="_blank" rel="noopener">Link anfordern</a>
     </div>
-    <p class="hint login-note">Noch keine Zugangsdaten? Schreib mir kurz, dann richte ich sie dir ein.</p>
   </div>
 </section>
 
@@ -248,26 +245,6 @@
 </footer>
 
 <script>
-// Schüler-Login: leitet zum geschützten Ordner weiter, den Passwort-Dialog zeigt der Browser
-(function () {
-  var form = document.getElementById('login-form');
-  var error = document.getElementById('login-error');
-  if (!form) return;
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    error.textContent = '';
-    var user = form.elements['username'].value.trim();
-
-    // Nur sichere Zeichen (verhindert z. B. "../" im Pfad)
-    if (!/^[A-Za-z0-9_-]{1,40}$/.test(user)) {
-      error.textContent = 'Bitte gib deinen Benutzernamen ein (nur Buchstaben, Ziffern, - und _).';
-      return;
-    }
-    window.location.href = '/schueler/' + encodeURIComponent(user) + '/';
-  });
-})();
-
 // Kontaktformular: Versand über FormSubmit ohne Seitenwechsel
 (function () {
   var form = document.getElementById('contact-form');
